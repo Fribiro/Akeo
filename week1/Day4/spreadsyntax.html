@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Syntax</title>
+</head>
+<body>
+    <script>
+        //get maximum value
+        //console.log(Math.max(1,2,3,4,2));
+        let arr = [10, 20, 30, 40, 50];
+        //console.log(Math.max(...arr));
+
+        //get max from 2 arrays
+        let arr1 = [10, 20, 30, 40, 50];
+        let arr2 = [60, 70, 80, 90, 100];
+        console.log(Math.max(500,...arr1, ...arr2, 1000));
+
+        sum = () => {
+            let num = 10
+        }
+        sum();
+        console.log(num);
+
+    </script>
+</body>
+</html>

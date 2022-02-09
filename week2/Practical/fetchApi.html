@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- https://jsonplaceholder.typicode.com/posts -->
+    <table>
+        <thead>
+            <th>UserId</th>
+            <th>Id</th>
+            <th>Title</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td id='uid'></td>
+                <td id='id'></td>
+                <td id='title'></td>
+            </tr>
+        </tbody>
+
+    </table>
+    <script>
+        async function fetchApi() {
+
+        const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+        const data = await res.json();
+        
+        for (let res of data) {
+            let userId = res.userId;
+            let id = res.id;
+            let title = res.title;
+            console.log(userId);
+            
+            document.getElementById("uid").textContent = userId[0];
+        }
+
+        // document.getElementById("uid").textContent = data[0].userId;
+        document.getElementById("id").textContent = data[0].id;
+        document.getElementById("title").textContent = data[0].title;
+        }
+        fetchApi();
+    </script>
+</body>
+</html>

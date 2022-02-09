@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion</title>
+</head>
+<body>
+    <script>
+        //string conversion
+        let value = true;
+        value = String(value);
+        console.log(typeof value);
+
+        //numeric conversion
+        let count = '20';
+        count = Number(count);
+        console.log(typeof count);
+
+        let count1 = 'some20';
+        count1 = Number(count1);
+        console.log(count1);//number of type NaN
+
+        //undefined data
+        let count3;
+        count3 = Number(count3);
+        console.log(count3);
+
+        //null data
+        let count4 = null;
+        count4 = Number(count4);
+        console.log(count4);//converting a null to a number gives you a 0
+
+        let count5 = true;
+        count5 = Number(count5);
+        console.log(count5);
+
+        //boolean conversion
+        console.log(Boolean(1));//true
+        console.log(Boolean(0));//false
+    </script>
+</body>
+</html>

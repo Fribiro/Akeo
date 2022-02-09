@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        //array destructuring 
+        let [prod1, prod2, prod3] = ['laptop', 'tv', 'fridge'];
+        //console.log(prod1);
+
+        //access product 3
+        let [pro1, , pro3] = ['laptop', 'tv', 'fridge'];
+        //console.log(pro3);//fridge
+
+        //the rest
+        let [prd1, ...rest] = ['laptop', 'tv', 'fridge'];
+        //console.log(rest);
+
+        //object destructuring
+        let student = {
+            name: 'John',
+            id: 2,
+            age: 25
+        }
+        //console.log(student);
+
+        let {name, id, age} = student;
+        //console.log(name, id, age);
+
+        //json
+        let std = {
+        'name': 'Paul',
+        'id': 2,
+        'age': 25
+        }
+        //console.log(std);
+
+        // //stringify - change an object to JSON
+        // let students = {
+        // name: 'John',
+        // id: 2,
+        // age: 25
+        // }
+        // let sd = JSON.stringify(students);
+        // console.log(sd);
+
+        //parse - change JSON to an object
+        let stds = {
+        'name': 'Paul',
+        'id': 2,
+        'age': 25
+        }
+        let s = JSON.stringify(stds);
+        let p  = JSON.parse(s);
+        console.log(p);
+
+    </script>
+</body>
+</html>

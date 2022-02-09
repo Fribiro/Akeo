@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum() {
+            let num1 = 10;
+            let num2 = 20;
+            let result =num1 + num2;
+        }//won't return anything
+
+        function sum(num1, num2) {
+        
+        let result =num1 + num2;
+        console.log(result);
+        return result;
+        }
+        let res = sum(1, 9);//variable res contains the value of result
+
+        let sum1 = (num11, num21) => num11 + num21;
+        let res1 = sum1(1, 9);
+        console.log(res1)
+
+    </script>
+</body>
+</html>

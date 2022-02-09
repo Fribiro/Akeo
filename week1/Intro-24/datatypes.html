@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+</head>
+<body>
+    <script>
+        //number
+        let count = 1/0;
+        console.log(count);//Infinite
+        //infinite number is one greater than any number
+
+        //string
+        let x = 'Hello' + 10;
+        console.log(typeof x);//string
+        let y = 'Hello' / 10;
+        console.log(y); //NaN
+        let z = '10' / 10;
+        console.log(z);//1 as a result of implicit conversion which is automatic
+
+        //Bigint
+
+        //embedding expressions in a string
+        let count1 = 20;
+        let price = 400;
+
+        let msg =`Total price is ${count1 * price}`
+        console.log(msg)
+
+        //boolean
+        let isMarried = true;
+        let s = 10 > 5;
+        console.log(s);
+
+        //null: references a non-existing object
+        //null is not an empty
+
+        //undefined: a declared variable which hasn't been assigned any value
+
+        //objects 
+        //objects using object literals
+        let student = {
+            name: 'Festus',
+            age: '24'
+        }
+        console.log(typeof student);
+        console.log(student);
+
+        //array
+        let counties = ['Nairobi', 'Kisumu', 'Mombasa']
+        console.log(counties);
+        console.log(typeof counties);
+
+    </script>
+</body>
+</html>

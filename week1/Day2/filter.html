@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+<body>
+    <script>
+        let products = [
+            {id: 1, name: 'Laptop'},
+            {id: 2, name: 'Tv'},
+            {id: 3, name: 'Radio'},
+        ]
+        let result = products.filter(function(item, index, array){
+            if(item.id === 3){
+                return item;
+            }
+        });
+        //console.log(result);
+
+        let results = products.filter((item, index, array) => {
+        if(item.name === 'Laptop'){
+        return item;
+        }
+        });
+
+        //console.log(results);
+        console.log(result[0].name);
+
+    </script>
+</body>
+</html>

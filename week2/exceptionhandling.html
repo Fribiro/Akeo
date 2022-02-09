@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling</title>
+</head>
+<body>
+    <script>
+        try {
+            let student = {
+                id: 1,
+                name: 'John'
+            }
+
+            if (student.age === undefined) {
+                throw new ReferenceError('You are trying to access an unavailavle.')
+            }
+        } catch (error) {
+            console.log('Something went wrong!' + error);
+        } finally {
+            console.log('End of execution.');
+        }
+        //console.log('Next part of the app.');
+
+    </script>
+</body>
+</html>

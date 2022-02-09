@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods</title>
+</head>
+<body>
+    <script>
+        //metthod of an object outside the object
+        let product = {
+            id: 1,
+            name: 'Festus'
+        }
+
+        product.printDetails = function() {
+            console.log(this.id);
+        }
+        product.printDetails();
+
+        //method inside the object
+        let products = {
+        id: 2,
+        name: 'Kamau',
+        printDetails: () => {
+            //console.log('Products Details')
+        }
+        }
+        products.printDetails();
+
+        let newProduct = product;
+        product = null;
+        newProduct.printDetails();
+
+        //arrow function don't have this keyword
+        let prods = {
+        id: 2,
+        name: 'Kamau',
+        // printDetails: () => {
+        // //console.log('Products Details')
+        // },
+
+        get properties(){
+            return `${this.id}`
+        }
+        
+        }
+        console.log(prods.properties);
+
+        console.log(this);
+
+    </script>
+</body>
+</html>

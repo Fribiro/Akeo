@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static</title>
+</head>
+<body>
+    <script>
+        class Student {
+            static printDetails() {
+                //console.log('Testing');
+            }
+        }
+        //let student = new Student();
+        Student.printDetails();
+
+        class Employees {
+            //use a # to make the property private ie
+            //only accessible witin the class
+            //#counter =  10 
+            constructor(empId, firstName, lastName, phone, email) {
+            this.empId = empId;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.phone = phone;
+            this.email = email;
+            }
+
+            //getters and setters : only secure way to get and set data
+            get getId(){
+            return this.empId;
+            }
+            get getfirstName(){
+            return this.firstName;
+            }
+            get getlastName(){
+            return this.lastName;
+            }
+            get getPhone(){
+            return this.phone;
+            }
+            get getEmail(){
+            return this.email;
+            }
+
+            set setId(id){
+                this.empId = id;
+            }
+            set setfirstName(fName){
+                this.firstName = fName;
+            }
+            set setlastName(lName){
+                this.lastName = lName;
+            }
+            set setPhone(phone){
+                this.phone = phone;
+            }
+            set setEmail(email){
+                this.email = email;
+            }
+
+
+        }
+        // class Developer extends Employees {
+
+        //     constructor(empId, firstName, lastName, phone, email,skills) {
+        //         super(empId, firstName, lastName, phone, email)
+        //         this.skills = skills;
+        //     }
+
+           
+        // }
+        // let developer = new Developer(21, 'John', 'Doe', '0711223344', 'doe@gmail.com', 'Devops');
+        let employee = new Employees(21, 'John', 'Doe', '0711223344', 'doe@gmail.com', 'Devops');
+        console.log(employee.getId)
+
+        employee.setEmail = 'john@gmail.com'
+        console.log(employee.getEmail)
+
+    </script>
+</body>
+</html>

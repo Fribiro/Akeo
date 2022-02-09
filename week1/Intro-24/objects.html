@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student = {
+            firstName: 'Billy',
+            lastName: 'Doe',
+            age: '20'
+        }
+        console.log(student.firstName);
+        //print keys only
+        console.log(Object.keys(student))
+
+        //this is a loop that loops through every key in the object
+        for(let std in student) {
+            console.log(std)
+        }
+
+        //print keys and the values
+        for (let user in student){
+            console.log(user, student[user]);
+        }
+
+        let product = {
+            name: 'laptop',
+            count: 10,
+            'In stock': true
+
+        }
+
+        console.log(product['In stock']);
+        product.count += 10;
+        console.log(product.count);
+        //delete a property
+        delete product['In stock'];
+        console.log(product);
+
+        let count1 = 0;
+        let res = count1 > 0 ? 'True' : 'false';//? ternary operator
+        console.log(res);
+
+        //logical operators
+        let username = "user";
+        let password = '123';
+        let check = username && password ? 'Login Successful' : 'Invalid credentials';
+        console.log(check)
+
+    </script>
+</body>
+</html>

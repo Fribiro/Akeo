@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Functions</title>
+</head>
+<body>
+    <script>
+        function even() {
+            let count = 0;
+
+            //function statements require a function name
+            function print(){
+                //console.log(count);
+            } 
+            print();
+        }
+        even();
+
+        function even1() {
+        let count1 = 0;
+
+        //in this case where we don't have a function name,
+        //the function becomes self executing
+        return function (){
+            return count1;
+        }
+        }
+        let res1 = even1();
+        //console.log(res1());
+
+        //arrow function
+        test = () => {
+            let con = 0;
+
+            return () => con;
+        }
+        let ress = test();
+        //console.log(ress());
+
+        //nested arrow function
+        test2 = (conn) => () => conn;
+        let ress1 = test2(0);
+        console.log(ress1());
+
+    </script>
+</body>
+</html>

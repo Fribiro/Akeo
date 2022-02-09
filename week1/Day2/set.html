@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set</title>
+</head>
+<body>
+    <script>
+        'use strict'
+        //a set is a collection that has no key
+        //a value can occur only once in a set
+        let mySet = new Set();
+
+        let user1 = {name: 'John'};
+        let user2 = {name: 'Brian'};
+        let user3 = {name: 'Mary'};
+
+        mySet.add(user1);
+        mySet.add(user3);
+        mySet.add(user1);
+        mySet.add(user2);
+        mySet.add(user1);
+
+        for (let s of mySet){
+            //console.log(s)
+        }
+
+        //console.log(mySet.size);
+
+        //forEach
+        mySet.forEach((value) => console.log(value))
+
+    </script>
+</body>
+</html>

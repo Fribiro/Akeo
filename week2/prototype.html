@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+        const myObject = {
+        city: 'Madrid',
+        greet() {
+        console.log(`Greetings from ${this.city}`);
+        }
+        }
+
+        const myObject1 = {
+            id: 1
+        }
+
+        //for myObject1 to inherit from myObject using __proto__
+        myObject1.__proto__ = myObject;
+
+        console.log(myObject1.city);//Madrid
+
+        console.log(myObject1.city.hasOwnProperty('city'));//false
+        //the object inheriting from another only maintains the reference
+
+    </script>
+</body>
+</html>

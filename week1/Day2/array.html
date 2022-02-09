@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        'use strict'
+        let product = ['laptop', 'fridge', 'tv', 'tv'];
+        //accessing array items using their index
+        //console.log(product[1]);
+
+        //get length of the array
+        //console.log(product.length);
+
+        //pop - remove last value from the array
+        let last = product.pop();
+        //console.log(last);
+        //console.log(product);
+
+        //push - appends a value to the end
+        let add = product.push('radio');
+        //console.log(add);
+        //console.log(product);
+
+        //shift - removes first element
+        let sh = product.shift();
+        //console.log(sh);
+        //console.log(product);
+
+        //unshift - adds the element at the beginning
+        let ush = product.unshift('laptop');
+        //console.log(ush);
+        //console.log(product);
+
+        //pop & push are faster than shift and unshift because shift and unshift
+        //remove the first element thus the elements left will have to be moved
+        //to retain correct positioning in the array
+
+        //for loop to get the elements in the array
+        for (let i=0; i < product.length; i++) {
+        //console.log(product[i]);
+        }
+
+        //for in is optimized for object not arrays therefore use for of
+
+        //for of loop
+        for (let p of product) {
+            //console.log(p);
+        }
+
+        //console.log([] == []);
+        //false because the arrays are being compared as different objects
+
+        //forEach
+        //syntax for forEach: arr.forEach(function (item, index, array) {});
+        product.forEach(function (item, index, array) {
+            //console.log(item)
+        });
+
+        //the forEach accepts a function with 3 arguments; item, index,array.Which can be renamed with any name eg a,b,c
+        product.forEach( (item, index, array) => {
+        //console.log(item, index)
+        });
+
+        //filter - filters an element from an array that meets a set condition
+        
+
+    </script>
+</body>
+</html>

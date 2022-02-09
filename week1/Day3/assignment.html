@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment</title>
+</head>
+<body>
+    <script>
+        //get sum of even numbers in array
+        let num = [1, 2, 3, 4, 5, 6];
+
+        let even = num.filter((item) => {
+            if(item%2 == 0){
+                return item;
+            }
+        })
+        let sum = (previousValue, currentValue) => previousValue + currentValue;
+
+        console.log(even.reduce(sum));
+
+        //get sum of even numbers in map
+        let num2 = [10, 11, 12, 13];
+
+        let even2 = num2.forEach((item) => {
+            if(item%2 == 0){
+            return item;
+            }
+        })
+        let sum2 = (previousValue, currentValue) => previousValue + currentValue;
+
+        console.log(even2.reduce(sum2));
+
+    </script>
+</body>
+</html>

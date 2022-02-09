@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+    <script>
+        class Employees {
+            constructor(empId, firstName, lastName) {
+                this.empId = empId;
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+            printDetails() {
+                console.log(this.empId, this.firstName, this.lastName);
+            }
+        }
+
+        class Developer extends Employees {
+               //capture parent arguments in the developer constructor to avoid
+               //overriding of the arguments in the parent constructor
+               //super is used to access the parent constructor and add on it
+               constructor(empId, firstName, lastName, skills) {
+                super(empId, firstName, lastName)
+                this.skills = skills;
+               }
+               printDetail() {
+               console.log(this.empId, this.firstName, this.lastName, this.skills);
+               }
+        }
+
+        let developer = new Developer(21, 'John', 'Doe', 'Devops');
+        developer.printDetail();
+        console.log(developer);
+
+    </script>
+</body>
+</html>

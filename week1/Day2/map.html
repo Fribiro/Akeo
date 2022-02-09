@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <script>
+        //map
+        let products = ['laptop', 'tv', 'fridge'];
+
+        //syntax arr.map(function(item, index, array) {return item});
+        let result = products.map((item, index, array) => {
+            return index;
+        });
+        //console.log(result);
+
+        let results = new Map();
+
+        //the keys should be in quotation marks
+        //the key and value are separated by a comma
+        results.set('id', 1);
+        results.set('name', 'John');
+        results.set('age', 20)
+
+        //console.log(results.get('age'));
+
+        let myMap =  new Map(
+            [
+                ['electronics', 10],
+                ['utensils', 100],
+                ['vegetables', 40],
+                [1, 'num1']
+            ]
+        );
+        //how to iterate over a map
+        //1. Iterate over keys with map.keys()
+        for (let key of myMap.keys()) {
+           // console.log(key);
+        }
+        //2. Iterate over values with map.values()
+        for (let val of myMap.values()) {
+        //console.log(val);
+        }
+        //3. Iterate over entries with map.entries()
+        for (let ent of myMap.entries()) {
+        //console.log(ent);
+        }
+
+        //Chaining
+        let chain = new Map();
+        chain.set('id', 1)
+             .set('name', 'john')
+             .set(true, 'bool')
+
+        console.log(chain);
+        //map forEach syntax : map.forEach(value,key,entries){}
+
+        //map from an object
+        let student = {
+            id: 1,
+            name: 'John',
+            age: '30'
+        }
+
+        let obj = new Map(Object.entries(student))
+
+        console.log(student.age)
+
+    </script>
+</body>
+</html>

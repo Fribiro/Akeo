@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 Ass Review</title>
+</head>
+
+<body>
+    <script>
+        let num = [1, 4, 7, 8, 10];
+
+        //when chaining don't have semicolons after the expression
+        //this is because while chaining the method passes the 
+        //returned value to the next method
+        let even = num.filter((item) => item%2 == 0)
+                   .map(x => x * 2)
+                    .reduce((previousValue, currentValue) => previousValue + currentValue);
+
+        console.log(even);
+
+    </script>
+</body>
+
+</html>
